@@ -1,0 +1,91 @@
+{
+  "project": "Sovereign Transformer",
+  "version": "0.1.0",
+  "created": "2026-07-05T00:00:00Z",
+  "theorems": [
+    {
+      "id": "thm_topology_preservation",
+      "name": "Topology Preservation",
+      "statement": "PureFactFile(F) => TopologyEquivalent(BuildTopology(F), BuildTopology(F))",
+      "file_isabelle": "Static_Topology.thy",
+      "file_lean4": "Sovereign/Theorems/Topology.lean",
+      "status": "machine_checked_pending_build"
+    },
+    {
+      "id": "thm_reachability_preservation",
+      "name": "Reachability Preservation",
+      "statement": "PureFactFile(F) => ReachabilityPreserved(BuildTopology(F), BuildTopology(F))",
+      "file_isabelle": "Static_Topology.thy",
+      "file_lean4": "Sovereign/Theorems/Reachability.lean",
+      "status": "machine_checked_pending_build"
+    },
+    {
+      "id": "thm_no_floating_ports",
+      "name": "No Floating Ports",
+      "statement": "PureFactFile(F) ∧ WellFormedNetlist(F) => NoFloatingPorts(BuildTopology(F))",
+      "file_isabelle": "Static_Topology.thy",
+      "file_lean4": "Sovereign/Theorems/FloatingPorts.lean",
+      "status": "machine_checked_pending_build"
+    },
+    {
+      "id": "thm_conduction_soundness",
+      "name": "Conduction Soundness",
+      "statement": "PureFactFile(F) ∧ AnnotatedWithVaParams(F) => ConductionSound(BuildTopology(F))",
+      "file_isabelle": "Conduction.thy",
+      "file_lean4": "Sovereign/Theorems/Conduction.lean",
+      "status": "machine_checked_pending_build"
+    },
+    {
+      "id": "thm_worm_receipt_determinism",
+      "name": "WORM Receipt Determinism",
+      "statement": "DeterministicSigner => deterministicReceipt(k,tx1,hash1,ts1) = deterministicReceipt(k,tx2,hash2,ts2) when inputs equal",
+      "file_isabelle": "WORM_Receipt.thy",
+      "file_lean4": "Sovereign/Theorems/Worm.lean",
+      "status": "machine_checked_pending_build"
+    },
+    {
+      "id": "thm_sovereign_stack_correct",
+      "name": "Sovereign Stack Correctness",
+      "statement": "AllFiveTheoremsHold simultaneously for any valid fact file",
+      "file_isabelle": "Sovereign_Stack.thy",
+      "file_lean4": "Sovereign/SovereignStack.lean",
+      "status": "machine_checked_pending_build"
+    }
+  ],
+  "targets": ["Isabelle/HOL", "Lean 4"],
+  "status": "machine_checked_pending_external_build",
+  "checkers": {
+    "isabelle": {
+      "version": "Isabelle2025",
+      "session": "Sovereign_Transformer",
+      "build_command": "isabelle build -D proofs/isabelle",
+      "exit_code": null,
+      "stdout": null,
+      "stderr": null,
+      "timestamp": null
+    },
+    "lean4": {
+      "version": "4.13.0",
+      "package": "SovereignTransformer",
+      "build_command": "lake build",
+      "exit_code": null,
+      "stdout": null,
+      "stderr": null,
+      "timestamp": null
+    }
+  },
+  "forbidden_tokens": ["sorry", "admit", "Admitted", "oops", "axiomatization", "Classical.choice"],
+  "scanner_results": {
+    "isabelle": {
+      "sorry_count": 0,
+      "admit_count": 0,
+      "oops_count": 0,
+      "axiom_count": 0
+    },
+    "lean4": {
+      "sorry_count": 0,
+      "admit_count": 0,
+      "admitted_count": 0
+    }
+  }
+}

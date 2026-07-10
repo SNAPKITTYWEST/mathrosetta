@@ -1,0 +1,31 @@
+﻿{
+    "id":  "MATHLIB5-20260710-MATHROSE-001",
+    "weight":  1,
+    "review_status":  "human_review_required",
+    "security_audit":  {
+                           "metadata_integrity":  "Yes",
+                           "tamper_evidence":  "SHA-256 chain (append-only)",
+                           "encryption":  "AES-256-GCM",
+                           "plasma_gate":  "Ed25519_Enforced"
+                       },
+    "family_id":  106,
+    "split":  [
+                  "audit",
+                  "kernel",
+                  "proofs",
+                  "runtime",
+                  "witnesses",
+                  "refinements",
+                  "asp_gate",
+                  "fol_engine",
+                  "prism_skills"
+              ],
+    "status":  "awaiting_worm_seal",
+    "provenance":  {
+                       "chain_link":  "Bifrost_WORM_Chain_20260710_01",
+                       "source_path":  "mathrosetta_source/",
+                       "corpora_path":  "corpora/formal_research/misc/"
+                   },
+    "source_sha256":  "auto_generated",
+    "created_by":  "Ahmad Ali Parr Â· SnapKitty Collective Â· the-49th-call SNAPKITTYWEST Â· 2026"
+}

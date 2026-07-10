@@ -1,0 +1,8 @@
+[package]
+name = "SovereignTransformer"
+version = "0.1.0"
+leanVersion = "4.13.0"
+license = "MIT"
+
+[dependencies]
+Mathlib = { git = "https://github.com/leanprover-community/mathlib4", rev = "main" }

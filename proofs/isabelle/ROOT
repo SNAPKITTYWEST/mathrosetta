@@ -1,0 +1,11 @@
+session Sovereign_Transformer = HOL +
+  theories
+    Topology_Syntax
+    Topology
+    Graph
+    Analog
+    WORM
+    Static_Topology
+    Conduction
+    WORM_Receipt
+    Sovereign_Stack
